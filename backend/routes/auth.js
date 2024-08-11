@@ -6,6 +6,7 @@ const { body, validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 //jwt - jsonwebtokens used to give secure connection between client and server
 const jwt = require("jsonwebtoken");
+const fetchuser = require("../middleware/fetchuser");
 
 const JWT_SECRET = "darshanch@4444";
 
@@ -116,16 +117,12 @@ router.post(
 );
 //Route 3:Get loggedin users details using POST:'/api/auth/getuser'.Login required
 router.post(
-  "/login",
-  [
-    //here we are getting the user who are getting login
-    body("email", "enter a valid email").isEmail(),
-    body("password", "password cannot be blank").exists(),
-  ],
+  "/getuser",fetchuser,
   async (req, res) => {
     try {
-      usedId = "todo";
+      usedId = req.user.id;
       const user = await User.findById(userId).select("-password");
+      res.send(user)
     } catch (error) {
       console.log(error.message);
       res.status(500).send("Internal server error");
