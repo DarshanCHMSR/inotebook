@@ -1,6 +1,7 @@
 const express = require("express");
 const User = require("../models/User");
 const router = express.Router();
+//it is used to validate the user,password
 const { body, validationResult } = require("express-validator");
 //bcrypt.js id used to add to salt to passwords
 const bcrypt = require("bcryptjs");
@@ -120,7 +121,7 @@ router.post(
   "/getuser",fetchuser,
   async (req, res) => {
     try {
-      usedId = req.user.id;
+      userId = req.user.id;
       const user = await User.findById(userId).select("-password");
       res.send(user)
     } catch (error) {
