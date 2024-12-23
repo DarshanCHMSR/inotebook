@@ -1,6 +1,6 @@
 import NoteContext from "./noteContext";
 import { useState } from "react";
-
+// to create a part to all -- delete , update and read function from one part
 const NoteState = (props) => {
   const host = "http://localhost:5000"
   const notesInitial = []
@@ -24,7 +24,7 @@ const NoteState = (props) => {
   const addNote = async (title, description, tag) => {
     // TODO: API Call
     // API Call 
-    const response = await fetch(`${host}/api/notes/addnote`, {
+    const response = await fetch(`${host}/api/notes/addnotes`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

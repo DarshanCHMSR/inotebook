@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import noteContext from "../context/notes/noteContext"
 
-
+//this is to display the things in the frontend that cart one 
 const Noteitem = (props) => {
     const context = useContext(noteContext);
     const { deleteNote } = context;

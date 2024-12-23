@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import noteContext from "../context/notes/noteContext"
 import Noteitem from './Noteitem';
 import AddNote from './AddNote';
-
+//this is to edit the note
 const Notes = () => {
     const context = useContext(noteContext);
     const { notes, getNotes, editNote } = context;
