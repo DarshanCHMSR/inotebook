@@ -23,19 +23,20 @@ router.post(
     }),
   ],
   async (req, res) => {
+    let success =false;
     // if there are error returns bad requests and the errors
 
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
+        return res.status(400).json({success, errors: errors.array() });
       }
       // CHECKS WHETHER THE USER WITH THIS EMAIL EXISTS ALREADY
       let user = await User.findOne({ email: req.body.email });
       if (user) {
         return res
           .status(400)
-          .json({ error: "sorry a user with this email already exists " });
+          .json({ success,error: "sorry a user with this email already exists " });
       }
       // adding salt using bcrypt.js it is made await because it retutns promises
       const salt = await bcrypt.genSalt(10);
@@ -58,7 +59,8 @@ router.post(
 
       const authtoken = jwt.sign(data, JWT_SECRET);
       //sending token--userid for fast instead of user
-      res.json(authtoken);
+      success=true;
+      res.json({success,authtoken});
       //res.json({ user });
       // catches the error
     } catch (error) {
@@ -78,11 +80,12 @@ router.post(
     body("password", "password cannot be blank").exists(),
   ],
   async (req, res) => {
+  let success =false;
     // if there are error returns bad requests and the errors
 
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
+      return res.status(400).json({success, errors: errors.array() });
     }
     //authicates whether the user of that name exist are not in the database
     const { email, password } = req.body;
@@ -91,14 +94,14 @@ router.post(
       if (!user) {
         return res
           .status(400)
-          .json({ error: "Please try to login with correct credentials" });
+          .json({success, error: "Please try to login with correct credentials" });
       }
       //authenticates whether the user entering correct password one or not
       const passwordCompare = await bcrypt.compare(password, user.password);
       if (!passwordCompare) {
         return res
           .status(400)
-          .json({ error: "Please try to login with correct credentials" });
+          .json({success, error: "Please try to login with correct credentials" });
       }
 
       const data = {
@@ -108,7 +111,8 @@ router.post(
       };
       //finally sends the token back l
       const authtoken = jwt.sign(data, JWT_SECRET);
-      res.json({ authtoken });
+      success=true;
+      res.json({success, authtoken });
       //if any error occurs--
     } catch (error) {
       console.log(error.message);
