@@ -2,7 +2,7 @@ import NoteContext from "./noteContext";
 import { useState } from "react";
 // to create a part to all -- delete , update and read function from one part
 const NoteState = (props) => {
-  const host = "http://localhost:5000"
+  const host = "http://localhost:5007"
   const notesInitial = []
   const [notes, setNotes] = useState(notesInitial)
 
