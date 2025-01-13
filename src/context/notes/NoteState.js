@@ -2,9 +2,58 @@ import NoteContext from "./noteContext";
 import { useState } from "react";
 // to create a part to all -- delete , update and read function from one part
 const NoteState = (props) => {
-  const host = "http://localhost:5007"
+  const host = "http://localhost:5000"
   const notesInitial = []
   const [notes, setNotes] = useState(notesInitial)
+
+
+  async function getAuthToken(apiUrl, credentials) {
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST', // Assuming a POST request
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({email: credentials.email, password: credentials.password})
+      });
+  
+    
+  
+      const data = await response.json();
+     
+      // Assuming the token is in the `token` field of the response
+      return data.authtoken;
+    } catch (error) {
+      console.error('Failed to fetch auth token:', error.message);
+      throw error;
+    }
+  }
+  
+  const apiUrl = 'http://localhost:5000/api/auth/login';
+  const credentials = {
+    email:"yagshq@gmail.com",
+    password: "5623772"
+  };
+  
+  getAuthToken(apiUrl, credentials)
+    .then(authtoken => {
+      console.log('Auth Token:', authtoken);
+    })
+    .catch(error => {
+      console.error('Error fetching token:', error);
+    });
+  
+
+
+
+
+
+
+
+
+
+
+
 
   // Get all Notes
   const getNotes = async () => {

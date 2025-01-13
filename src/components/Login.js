@@ -24,6 +24,7 @@ const Login = (props) => {
             localStorage.setItem('token', json.authtoken); 
             navigate("/");
             props.showAlert('Logged in Successfully', 'success')
+            console.log(json.authtoken)
         }
         else{
             props.showAlert('Invalid Credentials', 'danger')
