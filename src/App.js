@@ -57,6 +57,8 @@ import NoteState from './context/notes/NoteState';
 import Alert from './components/Alert';
 import Signup from './components/Signup';
 import Login from './components/Login';
+import Newlog from './components/Newlog';
+import Footer from './components/Footer';
 import { useState } from 'react';
 
 function App() {
@@ -83,10 +85,13 @@ function App() {
               <Route path="/about" element={<About  />} />  {/* Change here */}
               <Route path="/login" element={<Login  showAlert={showAlert}/>} />  {/* Change here */}
               <Route path="/signup" element={<Signup showAlert={showAlert} />} />  {/* Change here */}
+              <Route path="/newlog" element={<Newlog  />} />  {/* Change here */}
             </Routes>
           </div>
+        
         </Router>
       </NoteState>
+      <Footer />
     </>
   );
 }

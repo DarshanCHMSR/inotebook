@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
+import './Login.css'
 
 // this is the page to login
 const Login = (props) => {
@@ -37,7 +38,7 @@ const Login = (props) => {
     }
 
     return (
-        <div>
+        <div className='login'>
             
             <form  onSubmit={handleSubmit}>
             <h2>Login to continue to iNotebook</h2>
