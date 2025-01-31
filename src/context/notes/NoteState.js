@@ -2,7 +2,7 @@ import NoteContext from "./noteContext";
 import { useState } from "react";
 // to create a part to all -- delete , update and read function from one part
 const NoteState = (props) => {
-  const host = "http://localhost:5000"
+  const host = "https://backend-green-five-18.vercel.app"
   const notesInitial = []
   const [notes, setNotes] = useState(notesInitial)
 
@@ -29,7 +29,7 @@ const NoteState = (props) => {
     }
   }
   
-  const apiUrl = 'http://localhost:5000/api/auth/login';
+  const apiUrl = 'https://backend-green-five-18.vercel.app/api/auth/login';
   const credentials = {
     email:"yagshq@gmail.com",
     password: "5623772"

@@ -6,7 +6,7 @@ let navigate = useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();  
         const {name,email,password} = credentials;
-        const response = await fetch("http://localhost:5000/api/auth/creareuser", {
+        const response = await fetch("https://backend-green-five-18.vercel.app/api/auth/creareuser", {
           
             method: 'POST',
             headers: {
