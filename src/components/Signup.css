@@ -1,18 +1,16 @@
-.login{
+.signup{
     background-color: transparent;
     border-radius: 20px;
     border:1px solid rgba(255, 255, 255, 0.2);   
     height:430px;
     width:450px;
     margin:0;
-    display: flex;
     text-align: center;
     justify-content: center;
     margin-left:440px;
     backdrop-filter: blur(30px);
 box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2); 
-margin-top: 100px;  
-
+margin-top: 100px;       
 }
 .text{
     color: white;
@@ -20,17 +18,14 @@ margin-top: 100px;
     font-weight: bold;
     padding-top: 35px;
 }
-.email{
+.name{
     padding:10px;
     text-align: center;
     background-color: transparent;
     border-radius: 50px;
     width:380px;
     color: white;
-    border:1px solid rgba(255, 255, 255, 0.2);   
-}
-.line{
-    padding: 15px;
+    border:1px solid rgba(255, 255, 255, 0.2);  
 }
 .submit{
     padding:10px;
@@ -41,43 +36,6 @@ margin-top: 100px;
     border:1px solid rgba(255, 255, 255, 0.2);   
     background-color: white;
 }
-.password{
-    padding:10px;
-    background-color: transparent;
-    border-radius: 50px;
-    width:380px;
-    text-align: center  ;
-    color: white;
-    border:1px solid rgba(255, 255, 255, 0.2);  
-}
-::placeholder {
-    color: white;
-    opacity: 0.7; 
-  }
-  .texts{
-    padding:10px;
-    background-color: transparent;
-    border-radius: 50px;
-    width:380px;
-    text-align: center  ;
-    color: white;  
-  }
-.remembers{
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    padding-left: 3px;
-}
-.remembers a{
-    color:azure;
-    text-decoration: none;
-    padding-left: 3px;
-}
-.remembers label{
-    color:azure;
-    text-decoration: none;
-    padding-right: 120px;
-}
 .p{
     color: hwb(0 100% 0% / 0.681);
     padding-left: 10px;
@@ -86,5 +44,5 @@ margin-top: 100px;
 .p a{
     color:white;
     text-decoration: none;
-    padding-left: 10px;
+    /* padding-left: 100px; */
 }

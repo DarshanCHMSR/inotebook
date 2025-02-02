@@ -10,7 +10,7 @@ const Login = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const response = await fetch("https://backend-green-five-18.vercel.app/api/auth/login", {
-            method: 'POST',
+            method: 'POST',  
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -41,18 +41,28 @@ const Login = (props) => {
         <div className='login'>
             
             <form  onSubmit={handleSubmit}>
-            <h2>Login to continue to iNotebook</h2>
-                <div className="mb-3">
-                    <label htmlFor="email" className="form-label">Email address</label>
-                    <input type="email" className="form-control" value={credentials.email} onChange={onChange} id="email" name="email" aria-describedby="emailHelp" />
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+            <p className='text'>Login to continue to iNotebook</p>
+                <div className="mb-3 " >
+                    <input type="email" className="email" value={credentials.email} onChange={onChange} id="email" name="email" aria-describedby="emailHelp" placeholder='Enter your Email' />
+                    <div id="emailHelp" className="texts">We'll never share your email with anyone else.</div>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <input type="password" className="form-control" value={credentials.password} onChange={onChange} name="password" id="password" />
+                   
+                    <input type="password" className="password" value={credentials.password} onChange={onChange} name="password" id="password" placeholder='Password'/>
                 </div>
-
-                <button type="submit" className="btn btn-primary">Submit</button>
+    <div className="remembers">
+      <label>
+        <input type='checkbox' className='rem'/>Remember me
+    </label>
+      <a href="/signup">Forgot password?</a>
+      </div>
+        <div className='line'>
+      <button type='submit' className='submit' onClick={() => props.changeBackground('None')}>Login</button>
+      </div>
+      <div className="regiter">
+        <p className='p'>Don't remember password ?<a href="/signup" >Register</a></p>
+      </div>
+                {/* <button type="submit" className="btn btn-primary">Submit</button> */}
             </form>
         </div>
     )

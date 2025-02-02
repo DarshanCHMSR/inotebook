@@ -73,17 +73,32 @@ function App() {
       setAlert(null);
     },1500)
   }
+  const [backgroundImage, setBackgroundImage] = useState('url(https://t4.ftcdn.net/jpg/08/57/33/39/360_F_857333945_GUMsMA2X86auO8knHib9NGsCfzWM65PS.jpg)');
+  
+    // Function to change the background image
+    const changeBackground = (image) => {
+      console.log(image);
+      setBackgroundImage(`url(${image})`);
+    };
+  
   return (
-    <>
+    <div style={{ 
+      backgroundImage: backgroundImage,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      height: '100vh',
+      width: '100vw',
+      transition: 'background-image '
+    }}>
       <NoteState>
         <Router>
-          <Navbar />
+          <Navbar changeBackground={changeBackground}/>
           <Alert alert={alert} />
           <div className="container">
             <Routes>
               <Route path="/" element={<Home  showAlert={showAlert}/>} />  {/* Change here */}
               <Route path="/about" element={<About  />} />  {/* Change here */}
-              <Route path="/login" element={<Login  showAlert={showAlert}/>} />  {/* Change here */}
+              <Route path="/login" element={<Login  showAlert={showAlert} changeBackground={changeBackground}/>} />  {/* Change here */}
               <Route path="/signup" element={<Signup showAlert={showAlert} />} />  {/* Change here */}
               <Route path="/newlog" element={<Newlog  />} />  {/* Change here */}
             </Routes>
@@ -92,7 +107,7 @@ function App() {
         </Router>
       </NoteState>
       <Footer />
-    </>
+    </div>
   );
 }
 

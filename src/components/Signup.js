@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom'
+import './Signup.css'
+
 const Signup = (props) => {
         const [credentials, setCredentials] = useState({email: "", password: "" ,name:"" ,cpassword:""}) 
 let navigate = useNavigate();
@@ -35,58 +37,52 @@ let navigate = useNavigate();
 
 
   return (
-    <div className="container">
-      <h2>Signup to continue to iNotebook</h2>
+    <div className="signup">
+      <p className="text">Signup to continue to iNotebook</p>
         <form onSubmit={handleSubmit}>
       <div className="mb-3">
-        <label htmlFor="name" className="form-label">
-          Name
-        </label>
+        
         <input
           type="text"
-          className="form-control"
+           className="name"
           id="name" name="name"
           placeholder="Enter your Name"
           onChange={onChange}
         />
       </div>
       <div className="mb-3">        
-        <label htmlFor="email" className="form-label">
-          Email address
-        </label>
         <input
           type="email"
-          className="form-control"
+          className="name"
           id="email" name="email"
-          placeholder="name@example.com"  onChange={onChange}
+          placeholder="Enter your Email"  onChange={onChange}
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="password" className="form-label">
-          Enter password
-        </label>
+        
         <input
           type="password"
-          className="form-control"
+          className="name"
           id="password" name="password"
           placeholder="Enter password"  onChange={onChange}
 
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="cpassword" className="form-label">
-          Confirm Password
-        </label>
+        
         <input
           type="password"
-          className="form-control"
+           className="name"
           id="cpassword" name="cpassword"
           placeholder="Confirm Password"  onChange={onChange}
         />
       </div>
-      <button class="btn btn-primary" type="submit">
-        Button
+      <button className="submit" type="submit">
+        Sign Up
       </button>
+      <div className="regiter">
+        <p className='p'>Already Hava a Account? <a href="/login">Login</a></p>
+      </div>
       </form>
     </div>
   );
