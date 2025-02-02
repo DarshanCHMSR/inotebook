@@ -47,8 +47,7 @@ const Login = (props) => {
                     <div id="emailHelp" className="texts">We'll never share your email with anyone else.</div>
                 </div>
                 <div className="mb-3">
-                   
-                    <input type="password" className="password" value={credentials.password} onChange={onChange} name="password" id="password" placeholder='Password'/>
+                    <input type="password" className="pass" value={credentials.password} onChange={onChange} name="password" id="password" placeholder='Password'/>
                 </div>
     <div className="remembers">
       <label>

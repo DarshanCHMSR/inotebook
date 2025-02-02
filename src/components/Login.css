@@ -42,7 +42,7 @@ margin-top: 100px;
     background-color: white;
 }
     
-.password{
+.pass{
     padding: 0.625rem;
     background-color: transparent;
     border-radius: 3.125rem;
@@ -93,9 +93,44 @@ margin-top: 100px;
 }
 @media (max-width: 768px) {
     .login {
-        margin-left: 0;
+        margin-left: 90px;
         margin-top: 0;
-        width: 100%;
-        height: 100%;
+        width: 70%;
+        height: 50%;
+    }
+    
+    .text {
+        padding: 0;
+        margin: 0;
+        font-size: 1.2rem;
+    }
+    .email {
+        padding: 0.3rem;
+        width: 18rem;
+    }
+    .submit{
+        padding: 0.4rem;
+        width: 18rem;
+    }
+    .pass{
+        padding: 0.3rem;
+        width: 18rem;
+    }   
+    .remembers{
+        padding:0;
+    }
+    .texts{
+        width: 19rem;
+        padding: 0;
+        font-size: 0.9rem;
+    }
+    .remembers a{
+        padding: 0;
+    }
+    .remembers label{
+        padding-right: 1.9rem;
+    }
+    .line{
+        padding: 0.3rem;
     }
 }
