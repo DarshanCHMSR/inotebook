@@ -18,7 +18,7 @@ const Navbar = (props) => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className={`nav-link ${location.pathname==="/"? "active": ""}`} aria-current="page" to="/" onClick={() => props.changeBackground('None')}>Home</Link>
+                            <Link className={`nav-link ${location.pathname==="/"? "active": ""}`} aria-current="page" to="/" onClick={() => props.changeBackground('https://img.freepik.com/premium-photo/aesthetic-desktop-wallpaper-8k-photography-background_882954-2450.jpg')}>Home</Link>
                         </li>
                         <li className="nav-item">
                             <Link className={`nav-link ${location.pathname==="/about"? "active": ""}`} to="/about" onClick={() => props.changeBackground('None')}>About</Link>

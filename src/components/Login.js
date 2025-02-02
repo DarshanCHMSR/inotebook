@@ -25,7 +25,7 @@ const Login = (props) => {
             localStorage.setItem('token', json.authtoken); 
             props.showAlert('Logged in Successfully', 'success')
             navigate("/");
-            
+        props.changeBackground('https://img.freepik.com/premium-photo/aesthetic-desktop-wallpaper-8k-photography-background_882954-2450.jpg')
             // console.log(json.authtoken)
         }
         else{
@@ -57,7 +57,7 @@ const Login = (props) => {
       <a href="/signup">Forgot password?</a>
       </div>
         <div className='line'>
-      <button type='submit' className='submit' onClick={() => props.changeBackground('None')}>Login</button>
+      <button type='submit' className='submit' >Login</button>
       </div>
       <div className="regiter">
         <p className='p'>Don't remember password ?<a href="/signup" >Register</a></p>

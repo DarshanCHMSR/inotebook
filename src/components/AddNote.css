@@ -1,0 +1,96 @@
+.addnote{
+    margin:0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width:50vw;
+    margin-left: 435px;
+    /* border:5px solid #f1f1f1; */
+}
+.addnote p{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.title{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    margin-bottom: 40px;
+    padding: 0;
+    text-align: center;
+    color: black;
+}
+.des{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: black;
+}
+.tag{
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: black;
+    padding: 40px;
+}
+.text1{
+    padding:0.625rem;
+    margin-left: 29px;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 3.125rem;
+    width:45vw;
+    color: black;
+    border:1px solid black;   
+}
+.text2{
+    padding:0.625rem;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 3.125rem;
+    width:45vw; 
+    color: black;
+    border:1px solid black;   
+}
+.text3{
+    padding:0.625rem;
+
+    text-align: center;
+    background-color: transparent;
+    border-radius: 3.125rem;
+    width:45vw;
+    color: black;
+    border:1px solid black;   
+}
+.title ::placeholder {
+    color: black;
+    opacity: 0.7; 
+  }
+  .des ::placeholder {
+    color: black;
+    opacity: 0.7; 
+  }
+  .tag ::placeholder {
+    color: black;
+    opacity: 0.7; 
+  }
+    .button{
+        padding:0.625rem;
+        margin-left: 29px;
+        margin-top: 70px;
+        text-align: center;
+        background-color: white;
+        border-radius: 3.125rem;
+        width:45vw;
+        color: black;
+        border:1px solid black;   
+    }

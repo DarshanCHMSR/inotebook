@@ -35,7 +35,8 @@ const Notes = () => {
     }
 
     return (
-        <>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center',}}>
+
             <AddNote />
             <button ref={ref} type="button" className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Launch demo modal
@@ -71,17 +72,20 @@ const Notes = () => {
                     </div>
                 </div>
             </div>
-
-            <div className="row my-3">
-                <h2>You Notes</h2>
+            <div className="row my-3" style={{display: 'flex', flexDirection: 'row', alignItems: 'center',}}>
+                <h2>Your Notes</h2>
                 <div className="container mx-2"> 
                 {notes.length===0 && 'No notes to display'}
                 </div>
+                <div className="container mx-2">
+                <p>Total Notes: {notes.length}</p>
+            </div>
                 {notes.map((note) => {
                     return <Noteitem key={note._id} updateNote={updateNote} note={note} />
                 })}
             </div>
-        </>
+           
+        </div>
     )
 }
 
