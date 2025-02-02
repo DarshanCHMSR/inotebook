@@ -89,7 +89,9 @@ function App() {
       height: '100vh',
       width: '100vw',
       transition: 'background-image '
-    }}>
+      
+    }
+    }>
       <NoteState>
         <Router>
           <Navbar changeBackground={changeBackground}/>

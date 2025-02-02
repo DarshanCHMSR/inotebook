@@ -1,44 +1,45 @@
-.signup{
+.signup {
     background-color: transparent;
-    border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.2);   
-    height:430px;
-    width:450px;
-    margin:0;
+    border-radius: 1.25rem; /* 20px converted to rem */
+    border: 0.0625rem solid rgba(255, 255, 255, 0.2); /* 1px converted to rem */
+    height: 26.875rem; /* 430px converted to rem */
+    width: 28.125rem; /* 450px converted to rem */
+    margin: 0;
     text-align: center;
     justify-content: center;
-    margin-left:440px;
-    backdrop-filter: blur(30px);
-box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2); 
-margin-top: 100px;       
+    margin-left: 27.5rem; /* 440px converted to rem */
+    backdrop-filter: blur(1.875rem); /* 30px converted to rem */
+    box-shadow: 0 0 0.625rem 0 rgba(255, 255, 255, 0.2); /* 10px converted to rem */
+    margin-top: 6.25rem; /* 100px converted to rem */
 }
-.text{
+
+.text {
     color: white;
-    font-size: 30px;
+    font-size: 1.875rem; /* 30px converted to rem */
     font-weight: bold;
-    padding-top: 35px;
+    padding-top: 2.1875rem; /* 35px converted to rem */
 }
-.name{
-    padding:10px;
+.name {
+    padding: 0.625rem; /* 10px converted to rem */
     text-align: center;
     background-color: transparent;
-    border-radius: 50px;
-    width:380px;
+    border-radius: 3.125rem; /* 50px converted to rem */
+    width: 23.75rem; /* 380px converted to rem */
     color: white;
-    border:1px solid rgba(255, 255, 255, 0.2);  
+    border: 0.0625rem solid rgba(255, 255, 255, 0.2); /* 1px converted to rem */
 }
-.submit{
-    padding:10px;
-    border-radius: 50px;
+.submit {
+    padding: 0.625rem; /* 10px converted to rem */
+    border-radius: 3.125rem; /* 50px converted to rem */
     text-align: center;
-    width:380px;
+    width: 23.75rem; /* 380px converted to rem */
     color: black;
-    border:1px solid rgba(255, 255, 255, 0.2);   
+    border: 0.0625rem solid rgba(255, 255, 255, 0.2); /* 1px converted to rem */
     background-color: white;
 }
 .p{
     color: hwb(0 100% 0% / 0.681);
-    padding-left: 10px;
+    padding-left: 0.625rem;
     /* padding-right: 50px; */
 }
 .p a{
