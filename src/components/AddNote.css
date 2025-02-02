@@ -94,3 +94,23 @@
         color: black;
         border:1px solid black;   
     }
+    @media (max-width: 768px) {
+        .addnote {
+            margin-left: 0;
+        }
+        .text1{
+            width: 320px;
+            margin-left: 35px;
+        }
+        .text2{
+            width: 320px;
+            margin-left: 35px;
+        }
+        .text3{
+            width: 320px;
+        }
+        .button{
+            width: 320px;
+            margin-left: 35px;
+        }
+    }

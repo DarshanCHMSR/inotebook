@@ -1,26 +1,17 @@
-/* .background-container {
-  background-image: var(--background-image);
+
+.app{
   background-size: cover;
-  background-position: center;
-  height: 100vh;
-  width: 100vw;
-  transition: background-image 0.5s ease-in-out;
+background-position: center;
+height: 100vh;
+width: 100vw;
+transition: background-image;
 }
-
 @media (max-width: 768px) {
-  .background-container {
-    background-size: contain;
+  .app{
+    background-size: cover;
+    background-position: center;
+    height: 30rem;
+    width: 41rem;
+    transition: background-image;
   }
 }
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .background-container {
-    background-size: cover;
-  }
-}
-
-@media (min-width: 1025px) {
-  .background-container {
-    background-size: cover;
-  }
-} */

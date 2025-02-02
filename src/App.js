@@ -36,13 +36,9 @@ function App() {
     };
   
   return (
-    <div style={{ 
+    <div className='app' style={{ 
       backgroundImage: backgroundImage,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      height: '100vh',
-      width: '100vw',
-      transition: 'background-image ',
+     
     // backgroundAttachment: "fixed",
     // backgroundRepeat: 'no-repeat'
       
