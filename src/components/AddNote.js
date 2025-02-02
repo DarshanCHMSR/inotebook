@@ -22,7 +22,7 @@ const AddNote = () => {
         //this is the frontend form of the form
         <div className="addnote">
             <p>Add a Note</p>
-            <form className="my-3">
+            <form className="d">
                 <div className="title">
                     {/* <label htmlFor="title" className="title">Title</label> */}
                     <input type="text" className="text1" id="title" name="title" aria-describedby="emailHelp" value={note.title} onChange={onChange} minLength={5} required placeholder='Title' /> 

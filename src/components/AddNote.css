@@ -97,20 +97,53 @@
     @media (max-width: 768px) {
         .addnote {
             margin-left: 0;
+            height: 14rem;
+        }
+        .addnote p{
+            margin-left: 100px;
+            font-size: 24px;
         }
         .text1{
-            width: 320px;
-            margin-left: 35px;
+            width: 270px;
+            height: 40px;
+            margin: 0;
+            margin-left: 45px;
+            margin-bottom: 300px;
+           
         }
         .text2{
-            width: 320px;
-            margin-left: 35px;
+            margin: 0;
+            margin-top: 3px;
+            width: 270px;
+            height: 40px;
+            margin-left: 45px;
         }
         .text3{
-            width: 320px;
+            margin: 0;
+            width: 270px;
+            height: 40px;
+            margin-left: 45px;
         }
         .button{
-            width: 320px;
-            margin-left: 35px;
+            width: 270px;
+            height: 40px;
+            margin: 0;
+            margin-left: 45px;
+            margin-top: 3px;
+            
+        }
+        .tag{
+            padding: 0;
+            margin: 0;
+            
+            width: 270px;
+            height: 40px;
+        }
+        .title{
+            padding: 0;
+            margin: 0;
+            
+            width: 270px;
+            height: 40px;
         }
     }

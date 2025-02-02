@@ -10,7 +10,7 @@ transition: background-image;
   .app{
     background-size: cover;
     background-position: center;
-    height: 23rem;
+    height: 20rem;
     width: 30rem;
     transition: background-image;
   }

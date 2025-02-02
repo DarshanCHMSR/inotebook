@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import noteContext from "../context/notes/noteContext"
 import Noteitem from './Noteitem';
 import AddNote from './AddNote';
+import './Notes.css'
 //this is to edit the note
 const Notes = () => {
     const context = useContext(noteContext);
@@ -72,12 +73,12 @@ const Notes = () => {
                     </div>
                 </div>
             </div>
-            <div className="row my-3" style={{display: 'flex', flexDirection: 'row', alignItems: 'center',}}>
-                <h2>Your Notes</h2>
+            <div className="notes" >
+                <p className='pnotes'>Your Notes</p>
                 <div className="container mx-2"> 
                 {notes.length===0 && 'No notes to display'}
                 </div>
-                <div className="container mx-2">
+                <div className="totalnotes">
                 <p>Total Notes: {notes.length}</p>
             </div>
                 {notes.map((note) => {

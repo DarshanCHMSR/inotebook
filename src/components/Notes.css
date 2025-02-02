@@ -1,0 +1,19 @@
+.notes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+.pnotes{
+   font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+.totalnotes{
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
