@@ -8,10 +8,11 @@ transition: background-image;
 }
 @media (max-width: 768px) {
   .app{
+  
     background-size: cover;
-    background-position: center;
-    height: 20rem;
-    width: 30rem;
+    background-position:var(--bg-position);
+    height: 89vh;
+    width: 26rem;
     transition: background-image;
   }
 }

@@ -27,7 +27,7 @@ function App() {
       setAlert(null);
     },1500)
   }
-  const [backgroundImage, setBackgroundImage] = useState('url(https://t4.ftcdn.net/jpg/08/57/33/39/360_F_857333945_GUMsMA2X86auO8knHib9NGsCfzWM65PS.jpg)');
+  const [backgroundImage, setBackgroundImage] = useState('url(https://image.lexica.art/full_jpg/d71459d7-ce76-456e-a69e-f79674efb76e)');
   
     // Function to change the background image
     const changeBackground = (image) => {
