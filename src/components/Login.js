@@ -44,7 +44,7 @@ const Login = (props) => {
             <p className='text'>Login to continue to iNotebook</p>
                 <div className="mb-3 " >
                     <input type="email" className="email" value={credentials.email} onChange={onChange} id="email" name="email" aria-describedby="emailHelp" placeholder='Enter your Email' />
-                    <div id="emailHelp" className="texts">We'll never share your email with anyone else.</div>
+                    {/* <div id="emailHelp" className="texts">We'll never share your email with anyone else.</div> */}
                 </div>
                 <div className="mb-3">
                     <input type="password" className="pass" value={credentials.password} onChange={onChange} name="password" id="password" placeholder='Password'/>

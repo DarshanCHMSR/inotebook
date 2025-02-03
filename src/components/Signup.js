@@ -44,7 +44,7 @@ let navigate = useNavigate();
         
         <input
           type="text"
-           className="name"
+           className="names"
           id="name" name="name"
           placeholder="Enter your Name"
           onChange={onChange}
@@ -53,7 +53,7 @@ let navigate = useNavigate();
       <div className="mb-3">        
         <input
           type="email"
-          className="name"
+          className="names"
           id="email" name="email"
           placeholder="Enter your Email"  onChange={onChange}
         />
@@ -62,7 +62,7 @@ let navigate = useNavigate();
         
         <input
           type="password"
-          className="name"
+          className="names"
           id="password" name="password"
           placeholder="Enter password"  onChange={onChange}
 
@@ -72,7 +72,7 @@ let navigate = useNavigate();
         
         <input
           type="password"
-           className="name"
+           className="names"
           id="cpassword" name="cpassword"
           placeholder="Confirm Password"  onChange={onChange}
         />
