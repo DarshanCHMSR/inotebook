@@ -11,7 +11,7 @@ transition: background-image;
   
     background-size: cover;
     background-position:var(--bg-position);
-    height: 89vh;
+    height: 100vh;
     width: 26rem;
     transition: background-image;
   }
