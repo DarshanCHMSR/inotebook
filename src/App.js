@@ -11,12 +11,23 @@ import NoteState from './context/notes/NoteState';
 import Alert from './components/Alert';
 import Signup from './components/Signup';
 import Login from './components/Login';
-import Newlog from './components/Newlog';
+import Notes from './components/Notes';
 import Footer from './components/Footer';
 import { useState } from 'react';
 
 function App() {
   const [alert, setAlert] = useState(null);
+  const[mode,setMode]=useState('info');
+  const toogleMode=()=>{
+    if(mode === 'info'){
+    setMode('dark')
+    document.body.style.backgroundColor="#042743";
+    }
+    else{
+    setMode('info')
+    document.body.style.backgroundColor="white"
+    }
+    }
 
   const showAlert =(message,type)=>{
     setAlert({
@@ -31,7 +42,6 @@ function App() {
   
     // Function to change the background image
     const changeBackground = (image) => {
-      console.log(image);
       setBackgroundImage(`url(${image})`);
     };
   
@@ -46,7 +56,7 @@ function App() {
     }>
       <NoteState>
         <Router>
-          <Navbar changeBackground={changeBackground}/>
+          <Navbar changeBackground={changeBackground} mode={mode} toogleMode={toogleMode} />
           <Alert alert={alert} />
           <div className="container">
             <Routes>
@@ -54,7 +64,8 @@ function App() {
               <Route path="/about" element={<About  />} />  {/* Change here */}
               <Route path="/login" element={<Login  showAlert={showAlert} changeBackground={changeBackground}/>} />  {/* Change here */}
               <Route path="/signup" element={<Signup showAlert={showAlert} />} />  {/* Change here */}
-              <Route path="/newlog" element={<Newlog  />} />  {/* Change here */}
+              <Route path="/notes" element={<Notes  />} />  {/* Change here */}
+
             </Routes>
           </div>
         

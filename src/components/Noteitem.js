@@ -18,7 +18,7 @@ const Noteitem = (props) => {
                     </div>
                     <p className="card-text">{note.description}</p>
                     <i className="far fa-edit mx-2" onClick={()=>{updateNote(note)}}></i>
-                </div>
+                </div>   
             </div>
         </div>
     )

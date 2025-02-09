@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import noteContext from "../context/notes/noteContext"
 import Noteitem from './Noteitem';
-import AddNote from './AddNote';
 import './Notes.css'
 //this is to edit the note
 const Notes = () => {
@@ -38,7 +37,7 @@ const Notes = () => {
     return (
         <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center',}}>
 
-            <AddNote />
+          
             <button ref={ref} type="button" className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Launch demo modal
             </button>
@@ -84,7 +83,7 @@ const Notes = () => {
                 {notes.map((note) => {
                     return <Noteitem key={note._id} updateNote={updateNote} note={note} />
                 })}
-            </div>
+            </div>  
            
         </div>
     )
